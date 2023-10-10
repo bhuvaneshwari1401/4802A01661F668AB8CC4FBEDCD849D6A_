@@ -1,9 +1,33 @@
-def fact_rec(n):
-  if n==0 or n==1:
-    return 1
-  else:
-    return n*fact_rec(n-1)
-number = int(input("Enter a value : "))
-res = fact_rec(number)
+class Player:
 
-print("The factorial of {} is {}.".format(number,res))
+    def play(self):
+
+        print("The player is playing cricket.")
+
+# Define the Batsman class, derived from Player
+
+class Batsman(Player):
+
+    def play(self):
+
+        print("The batsman is batting.")
+
+# Define the Bowler class, derived from Player
+
+class Bowler(Player):
+
+    def play(self):
+
+        print("The bowler is bowling.")
+
+# Create objects of Batsman and Bowler classes
+
+batsman = Batsman()
+
+bowler = Bowler()
+
+# Call the play() method for each object
+
+batsman.play()
+
+bowler.play()
